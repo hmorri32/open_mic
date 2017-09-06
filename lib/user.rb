@@ -20,7 +20,13 @@ class User
     @jokes.each {|joke| user.jokes << joke}
   end
 
-  def
-
+  def learn_routine(file)
+    CSV.foreach(file) do |line|
+      num  = line[0]
+      ques = line[1]
+      answ = line[2]
+      joke = Joke.new({id: num, question: ques, answer: answ})
+      @jokes << joke
+    end
   end
 end

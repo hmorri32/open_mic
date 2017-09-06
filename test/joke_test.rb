@@ -7,6 +7,7 @@ class JokeTest < Minitest::Test
 
   def test_joke_exists 
     joke = Joke.new({id: 1, question: 2, answer: 3})
+    
     assert joke
     assert_instance_of Joke, joke
   end

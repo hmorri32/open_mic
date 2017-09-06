@@ -5,7 +5,8 @@ require './lib/user'
 require './lib/joke'
 
 class UserTest < Minitest::Test
-  def test_it_exists
+
+  def test_user_exists
     sal = User.new("Sal")
 
     assert_instance_of User, sal
@@ -61,6 +62,7 @@ class UserTest < Minitest::Test
                        answer: "Take away its credit cards."})
     ilana = User.new("Ilana")
     josh  = User.new("Josh")
+
     ilana.learn(joke_1)
     ilana.learn(joke_2)
     ilana.perform_routine_for(josh)

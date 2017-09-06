@@ -1,6 +1,7 @@
 class Joke
-  attr_accessor :id, :question, :answer
-
+  attr_reader :id, 
+              :question, 
+              :answer
 
   def initialize(id: num, question: ques, answer: ans)
     @id       = id 

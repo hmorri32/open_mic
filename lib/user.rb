@@ -21,7 +21,9 @@ class User
   end
 
   def learn_routine(file)
-    CSV.foreach(file) do |line|
+    arr = CSV.read(file)
+    arr.shift 
+    arr.each do |line|
       num  = line[0]
       ques = line[1]
       answ = line[2]
